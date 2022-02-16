@@ -4,3 +4,8 @@
 .widthHalf{
     width: 50%;
 }
+
+.notification{
+    display: none;
+    width: 50%;
+}
