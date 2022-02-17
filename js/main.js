@@ -116,7 +116,7 @@ function savingandRemaining(income_id, saving_input_id, saving_id, balance_id, r
 
 }
 
-////doing the clear notification operation
+//doing the clear notification operation
 function clearNotifications(type) {
     document.getElementById(type).style.display = "none";
 }
