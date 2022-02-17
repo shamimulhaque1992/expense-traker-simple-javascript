@@ -15,16 +15,28 @@
   <body>
     <!-- header section starts here -->
     <header class="universalWidth mx-auto text-center mb-1 pb-2 mt-1 pt-1">
-      <h1>Hishab Rakho<i class="fa fa-dollar-sign"></i></h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, non.</p>
+      <div class="d-flex justify-content-center align-items-center">
+        <h1 class="mx-2">Hishab Rakho</h1>
+        <img
+          style="width: 35px; height: 35px; margin-bottom: 10px;"
+          src="./image/wallet.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <h6>
+        Do not save what is left after spending, but spend what is left after
+        saving. <br />
+        – Warren Buffett
+      </h6>
     </header>
     <!-- header section ends here -->
 
     <!-- main section starts here -->
-    <main
-      class="main mx-auto justify-content-around universalWidth d-flex"
-    >
-      <section class="mainimg w-50 border border-3 d-flex justify-content-around align-items-center">
+    <main class="main mx-auto justify-content-around universalWidth d-flex">
+      <section
+        class="mainimg w-50 border border-3 d-flex justify-content-around align-items-center"
+      >
         <img
           class="img-fluid border border-1 rounded shadow-lg h-75"
           src="./image/clay-banks-JPhVGeY4H7I-unsplash.jpg"
@@ -35,22 +47,46 @@
         <h2 class="mb-4">Income</h2>
         <div class="income d-flex justify-content-around">
           <h5 class="h5 widthHalf">Income:</h5>
-          <input class="widthHalf" type="text" name="" id="income-input" />
+          <input
+            class="widthHalf"
+            placeholder="Enter your income"
+            type="text"
+            name=""
+            id="income-input"
+          />
         </div>
         <h2 class="mt-4 mb-4">Expenses</h2>
         <div class="food d-flex justify-content-around">
           <h5 class="h5 widthHalf">Food:</h5>
-          <input class="widthHalf" type="text" name="" id="food-input" />
+          <input
+            class="widthHalf"
+            placeholder="Enter your food expenses"
+            type="text"
+            name=""
+            id="food-input"
+          />
         </div>
         <br />
         <div class="rent d-flex justify-content-around">
           <h5 class="h5 widthHalf">Rent:</h5>
-          <input class="widthHalf" type="text" name="" id="rent-input" />
+          <input
+            class="widthHalf"
+            placeholder="Enter your rent expenses"
+            type="text"
+            name=""
+            id="rent-input"
+          />
         </div>
         <br />
         <div class="clothes d-flex justify-content-around">
           <h5 class="h5 widthHalf">Clothes:</h5>
-          <input class="widthHalf" type="text" name="" id="clothes-input" />
+          <input
+            class="widthHalf"
+            placeholder="Enter your clothes expenses"
+            type="text"
+            name=""
+            id="clothes-input"
+          />
         </div>
         <br /><br />
 
@@ -72,6 +108,13 @@
             and try again.
           </p>
           <p
+            id="error_inv"
+            class="notification mx-auto bg-danger text-white border rounded-3"
+          >
+            ❌You might have given Invalid input. Your total expenses exceedes
+            your income. Give less expenses and try again.
+          </p>
+          <p
             id="success"
             class="notification mx-auto bg-success text-white border rounded-3"
           >
@@ -85,13 +128,21 @@
           </h2>
           <h2 class="mb-3">Balance: $<span id="balance">00</span></h2>
         </div>
-        
-        <div class="savings_remaining d-flex justify-content-center align-items-center">
-          <div class="d-flex justify-content-around">
-            <h5 class="inline h5">Save:</h5>
-            <input id="save-input" class="saving_inp w-75" type="text" name="" />
+
+        <div
+          class="savings_remaining d-flex justify-content-center align-items-center"
+        >
+          <div class="d-flex justify-content-between save">
+            <h5 class="inline h5 mx-3">Save:</h5>
+            <input
+              id="save-input"
+              placeholder="Enter saving amount in %"
+              class="saving_inp input-class mx-3"
+              type="text"
+              name=""
+            />
           </div>
-          <h2 style="font-size:25px">%</h2>
+          <h2 style="font-size: 25px;padding-right: 20px;">%</h2>
           <button class="btn btn-primary" id="save-btn">Save</button>
         </div>
 
@@ -114,8 +165,8 @@
             id="error_inv_save"
             class="notification mx-auto bg-danger text-white border rounded-3"
           >
-            ❌You might have given negative input. Please give numerical value
-            and try again.
+            ❌You might have given invalid input. Your desired saving range
+            exceedes your balance. You can't save more than your balance.
           </p>
           <p
             id="success_save"
@@ -133,8 +184,6 @@
     </main>
     <!-- main section ends here -->
 
-    <!-- footer section starts here -->
-    <!-- footer section ends here -->
 
     <script src="./js/main.js"></script>
   </body>

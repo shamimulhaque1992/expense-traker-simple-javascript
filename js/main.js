@@ -28,8 +28,16 @@ function incomeExpenses(income_id, food_id, rent_id, clothes_id, total_expenses_
     else {
         const updated_total_expenses = document.getElementById(total_expenses_id).innerText = food_input + rent_input + clothes_input;
 
-        document.getElementById(total_balance_id).innerText = income_input - updated_total_expenses;
+        if(income_input < updated_total_expenses){
+            document.getElementById("error_inv").style.display = "block"
+            document.getElementById("balance").innerText = 0;
+        }
+        else {
+            document.getElementById(total_balance_id).innerText = income_input - updated_total_expenses;
         document.getElementById("success").style.display = "block"
+        }
+
+        
     }
 
 
@@ -78,6 +86,7 @@ function savingandRemaining(income_id, saving_input_id, saving_id, balance_id, r
 
     if (updated_savings > balance) {
         document.getElementById("error_inv_save").style.display = "block"
+        document.getElementById("Remaining-balance").innerText = 0;
     }
     else if (income_input < 0) {
         document.getElementById("error_neg_save").style.display = "block"
@@ -91,7 +100,7 @@ function savingandRemaining(income_id, saving_input_id, saving_id, balance_id, r
         // console.log("it is a String");
     }
     else if (saving_input < 0) {
-        document.getElementById("error_neg_save").style.display = "block"
+        // document.getElementById("error_neg_save").style.display = "block"
         document.getElementById(remaining_balance_id).innerText = 0;
         // console.log("it is a negative number");
     }
@@ -130,6 +139,9 @@ document.getElementById("error_str").addEventListener("click", function () {
 })
 document.getElementById("error_neg").addEventListener("click", function () {
     clearNotifications("error_neg")
+})
+document.getElementById("error_inv").addEventListener("click", function () {
+    clearNotifications("error_inv")
 })
 document.getElementById("success").addEventListener("click", function () {
     clearNotifications("success")

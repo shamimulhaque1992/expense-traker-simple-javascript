@@ -1,13 +1,16 @@
-body{
-    background-color: rgb(38, 56, 89);
-    color: rgb(255, 255, 255);
+body {
+  background-color: rgb(38, 56, 89);
+  color: rgb(255, 255, 255);
 }
 
-input{
-    border: 2px solid black;
-    border-radius: 5px;
+input {
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
+p {
+  cursor: pointer;
+}
 
 .inline {
   display: inline;
@@ -15,26 +18,38 @@ input{
 .widthHalf {
   width: 40%;
 }
-.main{
-    height: 810px;
-    background-color: rgb(57, 74, 112);
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: -1px -2px 11px 16px rgb(244 244 246 / 20%);
+.main {
+  height: 1000px;
+  background-color: rgb(57, 74, 112);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: -1px -2px 11px 16px rgb(244 244 246 / 20%);
 }
-.btn{
-    width: 90px;
+.btn {
+  width: 90px;
 }
-
-
 
 .notification {
   display: none;
   width: 50%;
 }
 
-.universalWidth{
-    width: 80%;
+.universalWidth {
+  width: 80%;
+}
+
+.input-class {
+  width: 100%;
+}
+.save {
+  width: 50%;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 20px;
+  padding-left: 2px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 688px) {
@@ -44,7 +59,6 @@ input{
     height: 40%;
     justify-content: space-around;
   }
-
   .h5 {
     font-size: 15px;
   }
@@ -52,16 +66,70 @@ input{
   .btn {
     width: 80px;
   }
-  h2{
-      font-size:20px
+  img {
+    width: 75%;
   }
-  .savings_remaining{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  h2 {
+    font-size: 20px;
+  }
+  .savings_remaining {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .universalWidth{
-      width:100%
+  .save {
+    width: 95%;
+  }
+  input,
+  input::-webkit-input-placeholder {
+    font-size: 10px;
+    padding-left: 2px;
+    text-align: center;
+  }
+
+  .universalWidth {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 688px) and (max-width: 1392px) {
+  .main {
+    flex-direction: row;
+
+    justify-content: space-around;
+  }
+  .h5 {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 80px;
+  }
+  img {
+    width: 75%;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .savings_remaining {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input,
+  input::-webkit-input-placeholder {
+    font-size: 10px;
+    padding-left: 2px;
+    text-align: center;
+  }
+
+  .universalWidth {
+    width: 80%;
+  }
+
+  .save {
+    width: 85%;
   }
 }
