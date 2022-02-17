@@ -1,29 +1,29 @@
 function incomeExpenses(income_id, food_id, rent_id, clothes_id, total_expenses_id, total_balance_id) {
     const income_input = parseFloat(document.getElementById(income_id + "-input").value);
-    console.log(income_input);
+    // console.log(income_input);
 
     const food_input = parseFloat(document.getElementById(food_id + "-input").value);
-    console.log(food_input);
+    // console.log(food_input);
 
     const rent_input = parseFloat(document.getElementById(rent_id + "-input").value);
-    console.log(rent_input);
+    // console.log(rent_input);
 
     const clothes_input = parseFloat(document.getElementById(clothes_id + "-input").value);
-    console.log(clothes_input);
+    // console.log(clothes_input);
 
     const total_prev_expenses = parseFloat(document.getElementById(total_expenses_id).innerText)
-    console.log(total_prev_expenses);
+    // console.log(total_prev_expenses);
 
     const total_prev_balance = parseFloat(document.getElementById(total_balance_id).innerText)
-    console.log(total_prev_balance);
+    // console.log(total_prev_balance);
 
     if (income_input % 1 != 0) {
         document.getElementById("error_str").style.display = "block"
-        console.log("it is a String");
+        // console.log("it is a String");
     }
     else if (income_input < 0) {
         document.getElementById("error_neg").style.display = "block"
-        console.log("it is a negative number");
+        // console.log("it is a negative number");
     }
     else {
         const updated_total_expenses = document.getElementById(total_expenses_id).innerText = food_input + rent_input + clothes_input;
