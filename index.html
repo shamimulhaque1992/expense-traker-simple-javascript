@@ -94,6 +94,37 @@
           <h2 style="font-size:25px">%</h2>
           <button class="btn btn-primary" id="save-btn">Save</button>
         </div>
+
+        <div class="error_message pt-3">
+          <p
+            id="error_str_save"
+            class="notification mx-auto bg-danger text-white border rounded-3"
+          >
+            ❌You might have given invalid input. Please give numerical value
+            and try again.
+          </p>
+          <p
+            id="error_neg_save"
+            class="notification mx-auto bg-danger text-white border rounded-3"
+          >
+            ❌You might have given negative input. Please give numerical value
+            and try again.
+          </p>
+          <p
+            id="error_inv_save"
+            class="notification mx-auto bg-danger text-white border rounded-3"
+          >
+            ❌You might have given negative input. Please give numerical value
+            and try again.
+          </p>
+          <p
+            id="success_save"
+            class="notification mx-auto bg-success text-white border rounded-3"
+          >
+            ✔Calculated successfully.
+          </p>
+        </div>
+
         <div class="savings_remaining">
           <h2 class="mt-3">Saving: $<span id="saving">00</span></h2>
           <h2>Remaining Balance: $<span id="Remaining-balance">00</span></h2>
